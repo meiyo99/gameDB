@@ -136,8 +136,8 @@ namespace GameDB.Controllers
                 MySqlCommand command = connection.CreateCommand();
 
                 string query = @"
-                    INSERT INTO reviews (game_id, date, rating, headline, text, status) 
-                    VALUES (@gameId, @date, @rating, @headline, @text, 'Approved')";
+                    INSERT INTO reviews (game_id, date, rating, headline, text) 
+                    VALUES (@gameId, @date, @rating, @headline, @text)";
 
                 command.CommandText = query;
                 command.Parameters.AddWithValue("@gameId", newReview.GameId);
@@ -178,7 +178,7 @@ namespace GameDB.Controllers
                 string query = @"
                     UPDATE reviews 
                     SET game_id = @gameId, date = @date, rating = @rating, 
-                        headline = @headline, text = @text, status = 'Approved'
+                        headline = @headline, text = @text
                     WHERE review_id = @id";
 
                 command.CommandText = query;

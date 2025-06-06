@@ -105,6 +105,7 @@ namespace GameDB.Controllers
         /// </returns>
         /// <example>
         /// POST: api/GameAPI/AddGame
+        /// HEADER: "Content-Type: application/json"
         /// </example>
         [HttpPost]
         [Route("AddGame")]
@@ -124,8 +125,8 @@ namespace GameDB.Controllers
                 MySqlCommand command = connection.CreateCommand();
 
                 string query = @"
-                    INSERT INTO games (title, release_date, description, developer, publisher) 
-                    VALUES (@title, @releaseDate, @description, @developer, '')";
+                    INSERT INTO games (title, release_date, description, developer) 
+                    VALUES (@title, @releaseDate, @description, @developer)";
 
                 command.CommandText = query;
                 command.Parameters.AddWithValue("@title", newGame.Title);
@@ -165,7 +166,7 @@ namespace GameDB.Controllers
                 string query = @"
                     UPDATE games 
                     SET title = @title, release_date = @releaseDate, description = @description, 
-                        developer = @developer, publisher = ''
+                        developer = @developer
                     WHERE game_id = @id";
 
                 command.CommandText = query;
