@@ -4,7 +4,7 @@ namespace GameDB.Models
 {
     public class GameDBContext
     {
-
+ 
         private static string User { get { return "mayureshnaidu"; } }
         private static string Password { get { return "mydatabase"; } }
         private static string Database { get { return "gamedb"; } }
@@ -21,7 +21,6 @@ namespace GameDB.Models
                     + ";port=" + Port
                     + ";password=" + Password
                     + ";convert zero datetime=True";
-
             }
         }
 

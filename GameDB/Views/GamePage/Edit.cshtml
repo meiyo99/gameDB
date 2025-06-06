@@ -1,0 +1,88 @@
+﻿@model GameDB.Models.Game
+
+@{
+    ViewData["Title"] = "Edit Game";
+}
+
+<nav>
+    <a class="navlink" href="/GamePage/Show/@Model.GameId">Back to Game Details</a>
+</nav>
+
+<h1>Edit Game: @Model.Title</h1>
+
+<form action="/GamePage/Update/@Model.GameId" method="POST">
+    <div class="form-group">
+        <label for="Title">Game Title</label>
+        <input type="text" id="Title" name="Title" value="@Model.Title" required />
+    </div>
+    <div class="form-group">
+        <label for="Developer">Developer</label>
+        <input type="text" id="Developer" name="Developer" value="@Model.Developer" required />
+    </div>
+    <div class="form-group">
+        <label for="ReleaseDate">Release Date</label>
+        <input type="date" id="ReleaseDate" name="ReleaseDate" value="@Model.ReleaseDate.ToString("yyyy-MM-dd")" required />
+    </div>
+    <div class="form-group">
+        <label for="Description">Description</label>
+        <textarea id="Description" name="Description" rows="4" required>@Model.Description</textarea>
+    </div>
+    <div class="form-group">
+        <input class="button" type="submit" value="Update Game">
+    </div>
+</form>
+
+<style>
+    .navlink {
+        color: #007bff;
+        text-decoration: none;
+        margin-bottom: 20px;
+        display: inline-block;
+    }
+
+    .form-group {
+        padding: 15px 0;
+        max-width: 500px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 16px;
+    }
+
+    .form-group textarea {
+        resize: vertical;
+        font-family: inherit;
+    }
+
+    .button {
+        padding: 12px 30px !important;
+        background: #007bff !important;
+        color: white !important;
+        border: 1px solid #007bff !important;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        width: auto !important;
+    }
+
+    .button:hover {
+        background: #0056b3 !important;
+    }
+
+    h1 {
+        color: #333;
+        margin-bottom: 20px;
+    }
+</style>

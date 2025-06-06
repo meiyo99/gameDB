@@ -1,0 +1,97 @@
+﻿@model List<GameDB.Models.Game>
+
+@{
+    ViewData["Title"] = "Games List";
+}
+
+<h1>Games Library</h1>
+
+<div class="add-button">
+    <a href="/GamePage/New">Add New Game</a>
+</div>
+
+<table>
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Developer</th>
+            <th>Release Date</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var game in Model)
+        {
+            <tr>
+                <td>@game.Title</td>
+                <td>@game.Developer</td>
+                <td>@game.ReleaseDate.ToString("yyyy-MM-dd")</td>
+                <td>
+                    <a href="@Url.Action("Show", new { id = game.GameId })">View</a> |
+                    <a href="@Url.Action("Edit", new { id = game.GameId })">Edit</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<style>
+    table {
+        width: 100%;
+        margin-top: 20px;
+        border-collapse: collapse;
+    }
+
+    h1 {
+        margin-top: 20px;
+        color: #333;
+    }
+
+    .add-button {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .add-button a {
+        text-decoration: none;
+        padding: 10px 20px;
+        background: #007bff;
+        color: white;
+        border: 1px solid #007bff;
+        border-radius: 4px;
+    }
+
+    .add-button a:hover {
+        background: #0056b3;
+    }
+
+    th, td {
+        border: 1px solid #ddd;
+        padding: 12px;
+        text-align: left;
+    }
+
+    th {
+        color: white;
+        background-color: #343a40;
+        font-weight: bold;
+    }
+
+    tr:nth-child(even) {
+        background-color: #e9ecef;
+    }
+
+    tr:hover {
+        background-color: #e9ecef;
+    }
+
+    td a {
+        color: #007bff;
+        text-decoration: none;
+        margin-right: 5px;
+    }
+
+        td a:hover {
+            text-decoration: underline;
+        }
+</style>

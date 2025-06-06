@@ -1,0 +1,127 @@
+﻿@model GameDB.Models.Review
+
+@{
+    ViewData["Title"] = "Review Details";
+}
+
+<nav>
+    <a class="navlink" href="/ReviewPage/List">Back to Reviews List</a>
+</nav>
+
+<div class="review-info">
+    <div class="review-header">
+        <h1>@Model.Headline</h1>
+        <div class="review-meta">
+            <span class="rating">Rating: @Model.Rating/10</span>
+        </div>
+    </div>
+
+    <hr />
+
+    <div class="review-details">
+        <p><em>Game:</em> <strong><a href="/GamePage/Show/@Model.GameId">@Model.GameTitle</a></strong></p>
+        <p><em>Review Date:</em> <strong>@Model.Date.ToString("yyyy-MM-dd HH:mm")</strong></p>
+        <p><em>Review Text:</em></p>
+        <div class="review-text">
+            @Model.Text
+        </div>
+    </div>
+
+    <div class="action-buttons">
+        <a class="edit" href="/ReviewPage/Edit/@Model.ReviewId">Edit Review</a>
+        <a class="delete" href="/ReviewPage/DeleteConfirm/@Model.ReviewId">Delete Review</a>
+        <a class="game-link" href="/GamePage/Show/@Model.GameId">View Game</a>
+    </div>
+</div>
+
+<style>
+    .navlink {
+        color: #007bff;
+        text-decoration: none;
+        margin-bottom: 20px;
+    }
+
+    .review-info {
+        border: 2px solid #343a40;
+        max-width: 800px;
+        padding: 20px;
+        margin-bottom: 30px;
+        border-radius: 8px;
+        background-color: #f8f9fa;
+    }
+
+    .review-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .review-header h1 {
+        margin: 0;
+        color: #333;
+    }
+
+    /* .review-meta { */
+    /*     display: flex; */
+    /*     flex-direction: column; */
+    /*     align-items: flex-end; */
+    /*     gap: 10px; */
+    /* } */
+
+    .rating {
+        font-size: 1.1em;
+    }
+
+    .review-details p {
+        margin: 15px 0;
+    }
+
+    .review-details a {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+    .review-details a:hover {
+        text-decoration: underline;
+    }
+
+    .review-text {
+        background-color: white;
+        padding: 15px;
+        border-radius: 4px;
+        border: 1px solid #ddd;
+        margin-top: 10px;
+        line-height: 1.6;
+    }
+
+    .action-buttons {
+        margin-top: 25px;
+        padding-top: 20px;
+        border-top: 1px solid #ddd;
+    }
+
+    .action-buttons a {
+        text-decoration: none;
+        padding: 8px 15px;
+        margin-right: 10px;
+        border-radius: 4px;
+        display: inline-block;
+    }
+
+    .delete {
+        background: #dc3545;
+        color: white;
+    }
+
+    .edit {
+        background: #007bff;
+        color: white;
+    }
+
+    .game-link {
+        background: #28a745;
+        color: white;
+    }
+
+</style>

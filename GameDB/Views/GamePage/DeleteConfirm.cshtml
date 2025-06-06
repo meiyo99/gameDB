@@ -1,0 +1,99 @@
+﻿@model GameDB.Models.Game
+
+@{
+    ViewData["Title"] = "Delete Game";
+}
+
+<nav>
+    <a class="navlink" href="/GamePage/Show/@Model.GameId">Back to Game Details</a>
+</nav>
+
+<h2>Are you sure you want to delete this game?</h2>
+<div class="warning-message">
+    <p><strong>Warning:</strong> Deleting this game will also delete all associated reviews!</p>
+</div>
+
+<div class="game-summary">
+    <h3>@Model.Title</h3>
+    <p><em>Developer:</em> @Model.Developer</p>
+    <p><em>Release Date:</em> @Model.ReleaseDate.ToString("yyyy-MM-dd")</p>
+    <p><em>Description:</em> @Model.Description</p>
+</div>
+
+<form method="POST" action="/GamePage/Delete/@Model.GameId">
+    <div class="button-group">
+        <input type="submit" value="Yes, Delete Game" class="delete-button" />
+        <a href="/GamePage/Show/@Model.GameId" class="cancel-button">Cancel</a>
+    </div>
+</form>
+
+<style>
+    .navlink {
+        color: #007bff;
+        text-decoration: none;
+        margin-bottom: 20px;
+        display: inline-block;
+    }
+
+    .warning-message {
+        color: #dc3545;
+        padding: 15px;
+        border-radius: 4px;
+        margin: 20px 0;
+        max-width: 600px;
+    }
+
+    .game-summary {
+        border: 2px solid #dc3545;
+        max-width: 600px;
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 8px;
+        background-color: #f8f9fa;
+    }
+
+    .game-summary h3 {
+        margin-top: 0;
+    }
+
+    .game-summary p {
+        margin: 8px 0;
+    }
+
+    .button-group {
+        margin-top: 20px;
+    }
+
+    .delete-button {
+        background: #dc3545;
+        color: white;
+        border: 1px solid #dc3545;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-right: 10px;
+    }
+
+    .delete-button:hover {
+        background: #c82333;
+    }
+
+    .cancel-button {
+        background: #6c757d;
+        color: white;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        display: inline-block;
+    }
+
+    .cancel-button:hover {
+        background: #5a6268;
+    }
+
+    h2 {
+        color: #dc3545;
+        margin-bottom: 20px;
+    }
+</style>

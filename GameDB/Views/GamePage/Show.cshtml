@@ -1,0 +1,73 @@
+﻿@model GameDB.Models.Game
+
+@{
+    ViewData["Title"] = "Game Details";
+}
+
+<nav>
+    <a class="navlink" href="/GamePage/List">Back to Games List</a>
+</nav>
+
+<div class="game-info">
+    <h1>@Model.Title</h1>
+    <hr />
+
+    <div class="game-details">
+        <p><em>Developer:</em> <strong>@Model.Developer</strong></p>
+        <p><em>Release Date:</em> <strong>@Model.ReleaseDate.ToString("yyyy-MM-dd")</strong></p>
+        <p><em>Description:</em> <strong>@Model.Description</strong></p>
+    </div>
+
+    <div class="action-buttons">
+        <a class="edit" href="/GamePage/Edit/@Model.GameId">Edit Game</a>
+        <a class="delete" href="/GamePage/DeleteConfirm/@Model.GameId">Delete Game</a>
+    </div>
+</div>
+
+<style>
+    .navlink {
+        color: #007bff;
+        text-decoration: none;
+        margin-bottom: 20px;
+        display: inline-block;
+    }
+
+    .game-info {
+        border: 2px solid #343a40;
+        max-width: 800px;
+        padding: 20px;
+        margin-bottom: 30px;
+        border-radius: 8px;
+        background-color: #f8f9fa;
+    }
+
+    .game-details p {
+        margin: 10px 0;
+    }
+
+    .action-buttons {
+        margin-top: 20px;
+    }
+
+    .action-buttons a {
+        text-decoration: none;
+        padding: 8px 15px;
+        margin-right: 10px;
+        border-radius: 4px;
+        display: inline-block;
+    }
+
+    .delete {
+        background: #dc3545;
+        color: white;
+    }
+
+    .edit {
+        background: #007bff;
+        color: white;
+    }
+
+    .action-buttons a:hover {
+        opacity: 0.8;
+    }
+</style>

@@ -12,6 +12,10 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddScoped<GameDBContext>();
+builder.Services.AddScoped<GameAPIController>();
+builder.Services.AddScoped<ReviewAPIController>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -29,7 +33,6 @@ app.UseRouting();
 
 app.UseSwagger();
 app.UseSwaggerUI();
-
 
 app.UseAuthorization();
 

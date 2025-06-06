@@ -1,0 +1,110 @@
+﻿@model GameDB.Models.Review
+
+@{
+    ViewData["Title"] = "Edit Review";
+    var games = ViewBag.Games as List<GameDB.Models.Game>;
+}
+
+<nav>
+    <a class="navlink" href="/ReviewPage/Show/@Model.ReviewId">Back to Review Details</a>
+</nav>
+
+<h1>Edit Review: @Model.Headline</h1>
+
+<form action="/ReviewPage/Update/@Model.ReviewId" method="POST">
+    <div class="form-group">
+        <label for="GameId">Select Game</label>
+        <select id="GameId" name="GameId" required>
+            @foreach (var game in games)
+            {
+                @if (Model.GameId == game.GameId)
+                {
+                    <option value="@game.GameId" selected>
+                        @game.Title
+                    </option>
+                }
+                else
+                {
+                    <option value="@game.GameId">
+                        @game.Title
+                    </option>
+                }
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="Headline">Review Headline</label>
+        <input type="text" id="Headline" name="Headline" value="@Model.Headline" required />
+    </div>
+    <div class="form-group">
+        <label for="Rating">Rating (1-10)</label>
+        <input type="number" id="Rating" name="Rating" min="1" max="10" value="@Model.Rating" required />
+    </div>
+    <div class="form-group">
+        <label for="Text">Review Text</label>
+        <textarea id="Text" name="Text" rows="6" required>@Model.Text</textarea>
+    </div>
+    <div class="form-group">
+        <input class="button" type="submit" value="Update Review">
+    </div>
+</form>
+
+<style>
+    .navlink {
+        color: #007bff;
+        text-decoration: none;
+        margin-bottom: 20px;
+        display: inline-block;
+    }
+
+    .form-group {
+        padding: 15px 0;
+        max-width: 500px;
+    }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            font-family: inherit;
+        }
+
+        .form-group select {
+            background-color: white;
+        }
+
+    .button {
+        padding: 12px 30px !important;
+        background: #007bff !important;
+        color: white !important;
+        border: 1px solid #007bff !important;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        width: auto !important;
+    }
+
+        .button:hover {
+            background: #0056b3 !important;
+        }
+
+    h1 {
+        color: #333;
+        margin-bottom: 20px;
+    }
+</style>

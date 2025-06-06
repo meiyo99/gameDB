@@ -1,0 +1,100 @@
+﻿@model List<GameDB.Models.Review>
+
+@{
+    ViewData["Title"] = "Reviews List";
+}
+
+<h1>Game Reviews</h1>
+
+<div class="add-button">
+    <a href="/ReviewPage/New">Add New Review</a>
+</div>
+
+<table>
+    <thead>
+        <tr>
+            <th>Game</th>
+            <th>Headline</th>
+            <th>Rating</th>
+            <th>Date</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var review in Model)
+        {
+            <tr>
+                <td>@review.GameTitle</td>
+                <td>@review.Headline</td>
+                <td>@review.Rating/10</td>
+                <td>@review.Date.ToString("yyyy-MM-dd")</td>
+                <td>
+                    <a href="@Url.Action("Show", new { id = review.ReviewId })">View</a> |
+                    <a href="@Url.Action("Edit", new { id = review.ReviewId })">Edit</a> |
+                    <a href="@Url.Action("DeleteConfirm", new { id = review.ReviewId })">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<style>
+    table {
+        width: 100%;
+        margin-top: 20px;
+        border-collapse: collapse;
+    }
+
+    h1 {
+        margin-top: 20px;
+        color: #333;
+    }
+
+    .add-button {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .add-button a {
+        text-decoration: none;
+        padding: 10px 20px;
+        background: #28a745;
+        color: white;
+        border: 1px solid #28a745;
+        border-radius: 4px;
+    }
+
+    .add-button a:hover {
+        background: #218838;
+    }
+
+    th, td {
+        border: 1px solid #ddd;
+        padding: 12px;
+        text-align: left;
+    }
+
+    th {
+        color: white;
+        background-color: #343a40;
+        font-weight: bold;
+    }
+
+    tr:nth-child(even) {
+        background-color: #e9ecef;
+    }
+
+    tr:hover {
+        background-color: #e9ecef;
+    }
+
+    td a {
+        color: #007bff;
+        text-decoration: none;
+        margin-right: 5px;
+    }
+
+    td a:hover {
+        text-decoration: underline;
+    }
+</style>

@@ -1,0 +1,106 @@
+﻿@model GameDB.Models.Review
+
+@{
+    ViewData["Title"] = "Delete Review";
+}
+
+<nav>
+    <a class="navlink" href="/ReviewPage/Show/@Model.ReviewId">Back to Review Details</a>
+</nav>
+
+<h2>Are you sure you want to delete this review?</h2>
+
+<div class="review-summary">
+    <h3>@Model.Headline</h3>
+    <p><em>Game:</em> @Model.GameTitle</p>
+    <p><em>Rating:</em> @Model.Rating/10</p>
+    <p><em>Date:</em> @Model.Date.ToString("yyyy-MM-dd HH:mm")</p>
+    <div class="review-text-preview">
+        <em>Review Text:</em>
+        <p>@Model.Text</p>
+    </div>
+</div>
+
+<form method="POST" action="/ReviewPage/Delete/@Model.ReviewId">
+    <div class="button-group">
+        <input type="submit" value="Delete Review" class="delete-button" />
+        <a href="/ReviewPage/Show/@Model.ReviewId" class="cancel-button">Cancel</a>
+    </div>
+</form>
+
+<style>
+    .navlink {
+        color: #007bff;
+        text-decoration: none;
+        margin-bottom: 20px;
+        display: inline-block;
+    }
+
+    .review-summary {
+        border: 2px solid #dc3545;
+        max-width: 600px;
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 8px;
+        background-color: #f8f9fa;
+    }
+
+    .review-summary h3 {
+        margin-top: 0;
+    }
+
+    .review-summary p {
+        margin: 8px 0;
+    }
+
+    .review-text-preview {
+        margin-top: 15px;
+        padding-top: 15px;
+        border-top: 1px solid #ddd;
+    }
+
+    .review-text-preview p {
+        background-color: white;
+        padding: 10px;
+        border-radius: 4px;
+        border: 1px solid #ddd;
+        margin-top: 5px;
+    }
+
+    .button-group {
+        margin-top: 20px;
+    }
+
+    .delete-button {
+        background: #dc3545;
+        color: white;
+        border: 1px solid #dc3545;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-right: 10px;
+    }
+
+    .delete-button:hover {
+        background: #c82333;
+    }
+
+    .cancel-button {
+        background: #6c757d;
+        color: white;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        display: inline-block;
+    }
+
+    .cancel-button:hover {
+        background: #5a6268;
+    }
+
+    h2 {
+        color: #dc3545;
+        margin-bottom: 20px;
+    }
+</style>
