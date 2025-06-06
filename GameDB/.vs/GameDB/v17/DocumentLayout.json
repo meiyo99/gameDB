@@ -12,10 +12,6 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Mayuresh\\AppData\\Local\\SourceServer\\dccc85f94276b795c3def78420a63514ffd86e10c0a77359b67b9dce5a73380a\\GameDB\\Controllers\\GameAPIController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{289EC87A-5B61-45A7-B731-2A2BA0DFFBE3}|GameDB.csproj|c:\\users\\mayuresh\\desktop\\gamedb\\gamedb\\controllers\\gamepagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{289EC87A-5B61-45A7-B731-2A2BA0DFFBE3}|GameDB.csproj|solutionrelative:controllers\\gamepagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -25,7 +21,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,19 +38,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAKgAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-06T20:30:08.972Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "GamePageController.cs",
-              "DocumentMoniker": "C:\\Users\\Mayuresh\\Desktop\\gameDB\\GameDB\\Controllers\\GamePageController.cs",
-              "RelativeDocumentMoniker": "Controllers\\GamePageController.cs",
-              "ToolTip": "C:\\Users\\Mayuresh\\Desktop\\gameDB\\GameDB\\Controllers\\GamePageController.cs",
-              "RelativeToolTip": "Controllers\\GamePageController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T20:28:29.179Z",
               "EditorCaption": ""
             },
             {
@@ -78,7 +61,7 @@
               "RelativeDocumentMoniker": "Controllers\\ReviewAPIController.cs",
               "ToolTip": "C:\\Users\\Mayuresh\\Desktop\\gameDB\\GameDB\\Controllers\\ReviewAPIController.cs",
               "RelativeToolTip": "Controllers\\ReviewAPIController.cs",
-              "ViewState": "AgIAAKgAAAAAAAAAAAAWwLQAAAA6AAAAAAAAAA==",
+              "ViewState": "AgIAAKcAAAAAAAAAAAAWwNEAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-06T19:07:23.933Z",
               "EditorCaption": ""
