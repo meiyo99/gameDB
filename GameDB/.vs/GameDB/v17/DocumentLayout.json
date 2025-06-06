@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\Mayuresh\\Desktop\\gameDB\\GameDB\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{52FEFE06-BC77-4474-A207-2759965F7E95}|GameDB.csproj|c:\\users\\mayuresh\\desktop\\gamedb\\gamedb\\models\\gamedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52FEFE06-BC77-4474-A207-2759965F7E95}|GameDB.csproj|solutionrelative:models\\gamedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52FEFE06-BC77-4474-A207-2759965F7E95}|GameDB.csproj|c:\\users\\mayuresh\\desktop\\gamedb\\gamedb\\controllers\\gameapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52FEFE06-BC77-4474-A207-2759965F7E95}|GameDB.csproj|solutionrelative:controllers\\gameapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{52FEFE06-BC77-4474-A207-2759965F7E95}|GameDB.csproj|c:\\users\\mayuresh\\desktop\\gamedb\\gamedb\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{52FEFE06-BC77-4474-A207-2759965F7E95}|GameDB.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -23,12 +31,38 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "GameDBContext.cs",
+              "DocumentMoniker": "C:\\Users\\Mayuresh\\Desktop\\gameDB\\GameDB\\Models\\GameDBContext.cs",
+              "RelativeDocumentMoniker": "Models\\GameDBContext.cs",
+              "ToolTip": "C:\\Users\\Mayuresh\\Desktop\\gameDB\\GameDB\\Models\\GameDBContext.cs",
+              "RelativeToolTip": "Models\\GameDBContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T16:30:46.73Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GameAPIController.cs",
+              "DocumentMoniker": "C:\\Users\\Mayuresh\\Desktop\\gameDB\\GameDB\\Controllers\\GameAPIController.cs",
+              "RelativeDocumentMoniker": "Controllers\\GameAPIController.cs",
+              "ToolTip": "C:\\Users\\Mayuresh\\Desktop\\gameDB\\GameDB\\Controllers\\GameAPIController.cs",
+              "RelativeToolTip": "Controllers\\GameAPIController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAYwAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T16:27:54.317Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Mayuresh\\Desktop\\gameDB\\GameDB\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\Mayuresh\\Desktop\\gameDB\\GameDB\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAkwAwAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-06T16:05:06.534Z",
               "EditorCaption": ""
